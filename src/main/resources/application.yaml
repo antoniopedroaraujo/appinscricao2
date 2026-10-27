@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: appinscricao
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/inscricoes-db?createDatabaseIfNotExist=true
+    username: root
+    password: danilo123
+  jpa:
+    #hibernate:
+      #ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+integrations:
+  viacep:
+    url: https://viacep.com.br
+
+api:
+  security:
+    token:
+      secret: 123
