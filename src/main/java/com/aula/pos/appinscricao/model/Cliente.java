@@ -29,9 +29,6 @@ public class Cliente {
     @Column(length = 150, nullable = false)
     private String email;
 
-    /* Utilizar depois que criar Compra
-
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
     private List<Compra> compras = new ArrayList<>();
-     */
 }

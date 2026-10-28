@@ -1,9 +1,9 @@
 spring:
   application:
-    name: appinscricao
+    name: appinscricao2
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/inscricoes-db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/inscricoes2-db?createDatabaseIfNotExist=true
     username: root
     password: danilo123
   jpa:
@@ -12,6 +12,9 @@ spring:
     show-sql: true
     properties:
       hibernate.format_sql: true
+      hibernate:
+        type:
+          preferred_uuid_jdbc_type: CHAR
 
 integrations:
   viacep:
@@ -21,3 +24,7 @@ api:
   security:
     token:
       secret: 123
+
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: TRACE
